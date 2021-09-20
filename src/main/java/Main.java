@@ -6,6 +6,7 @@ import com.github.scribejava.core.model.Response;
 import com.github.scribejava.core.model.Verb;
 import com.github.scribejava.core.oauth.OAuth20Service;
 import com.github.scribejava.httpclient.okhttp.OkHttpHttpClientConfig;
+import com.github.scribejava.httpclient.okhttp.OkHttpProvider;
 import oauth.SapHanaOnDemandApi20;
 import org.jetbrains.annotations.Nullable;
 
@@ -25,7 +26,7 @@ public class Main {
         SapHanaOnDemandApi20 sampleApi20 = new SapHanaOnDemandApi20();
         OAuth20Service oAuth20Service = new ServiceBuilder(cmdArgs.getClientId())
                 .apiSecret(cmdArgs.getClientSecret())
-                .httpClientConfig(OkHttpHttpClientConfig.defaultConfig())
+                .httpClient(new OkHttpProvider().createClient(OkHttpHttpClientConfig.defaultConfig()))
                 .build(sampleApi20);
         try {
             OAuth2AccessToken accessToken = oAuth20Service.getAccessTokenPasswordGrant(cmdArgs.getUsername(), cmdArgs.getPassword());
