@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.saphana.oauth.products'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.github.scribejava:scribejava-core:8.3.1'
+    implementation 'com.github.scribejava:scribejava-httpclient-okhttp:8.3.1'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testImplementation 'org.mockito:mockito-inline:3.12.4'
+    testImplementation 'org.mockito:mockito-junit-jupiter:3.12.4'
+}
+
+test {
+    useJUnitPlatform()
+}
