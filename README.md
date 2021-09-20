@@ -18,5 +18,5 @@ password=dummh_password
 
 To run the test case
 ```bash
-./gradle test
+./gradlew test
 ```
