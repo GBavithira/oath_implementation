@@ -1,4 +1,4 @@
-##OAuth client API implementation
+## OAuth client API implementation
 
 This makes use of the [ScribeJava](https://github.com/scribejava/scribejava) library for the OAuth Client implementation. ScribeJava supports Synchronous and Asynchronous API calls.\
 [OkHttp](https://github.com/square/okhttp) is used as the Http client library.
